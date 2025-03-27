@@ -87,5 +87,6 @@ public class Parcel {
     	getAllParcels();
     	displayAllParcels();
     	System.out.println(allParcels.size());
+    	// testing
     }
 }
