@@ -79,9 +79,6 @@ public class Parcel {
 		}
 	}
 	
-	
-	
-	
 	// Just for testing purpose
     // Display all parcels
     public static void displayAllParcels() {
