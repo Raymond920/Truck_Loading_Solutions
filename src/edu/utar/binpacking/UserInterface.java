@@ -62,12 +62,20 @@ public class UserInterface {
         }
         
         List<Parcel> parcels = Parcel.getAllParcels();
+
         if (parcels.isEmpty()) {
             System.out.println("No parcels loaded. Loading from CSV...");
         }
         
         System.out.print("Enter truck load limit: ");
         truckLoadLimit = scanner.nextDouble();
+        
+        while (truckLoadLimit < Parcel.getLargestWeight()) {
+        	System.out.println("The minimum load limit must larger than " + Parcel.getLargestWeight());
+            System.out.print("Enter truck load limit: ");
+            truckLoadLimit = scanner.nextDouble();
+        }
+        
         
         List<Truck> resultList = algorithm.pack(parcels, truckLoadLimit);
         displayResults(resultList);

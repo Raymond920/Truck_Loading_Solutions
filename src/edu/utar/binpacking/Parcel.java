@@ -34,6 +34,17 @@ public class Parcel {
 		this.type = type;
 	}
 	
+	public static double getLargestWeight() {
+		double largest = 0.0;
+		for(int i = 0; i < allParcels.size(); i++) {
+			if(Double.compare(allParcels.get(i).getWeight(), largest) >= 0) {
+				largest = allParcels.get(i).getWeight();
+			}
+		}
+		return largest;
+	}
+	
+	// return allParcels list if exists, singleton pattern
 	public static List<Parcel> getAllParcels(){
 		// Check if no parcel inside the list
 		if (allParcels == null) {
