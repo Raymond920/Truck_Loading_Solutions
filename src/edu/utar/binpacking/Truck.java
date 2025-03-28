@@ -45,11 +45,10 @@ public class Truck {
 	}
 	
 	public double countRemainingLoad() {
-		double remainingLoad = 0.0;
 		// to check the parcels list is not empty
 		if(!packedParcels.isEmpty()) {
 			for(int i = 0; i < packedParcels.size(); i++) {
-				remainingLoad = loadLimit - packedParcels.get(i).getWeight();
+				remainingLoad = remainingLoad - packedParcels.get(i).getWeight();
 			}
 		}
 		return remainingLoad;
