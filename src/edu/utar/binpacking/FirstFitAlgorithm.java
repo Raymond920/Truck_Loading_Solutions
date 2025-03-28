@@ -21,7 +21,6 @@ public class FirstFitAlgorithm implements BinPackingAlgorithm{
 			for(j = 0; j < truckList.size(); j++) {
 				// To check if a parcel has smaller weight than a truck remaining loadlimit
 				if(Double.compare(truckList.get(j).getRemainingLoad(), parcels.get(i).getWeight())>= 0) {
-//				if(truckList.get(j).getRemainingLoad() >= parcels.get(i).getWeight()) {
 					// add the parcel to the truck
 					truckList.get(j).addParcel(parcels.get(i));
 					break;
