@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 public class Parcel {
 	private String name;
 	private double weight;
+	private String type;
 	public static List<Parcel> allParcels;
 	
 	public String getName() {
@@ -20,10 +21,17 @@ public class Parcel {
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
 	
-	public Parcel(String name, double weight) {
+	public Parcel(String name, double weight, String type) {
 		this.name = name;
 		this.weight = weight;
+		this.type = type;
 	}
 	
 	public static List<Parcel> getAllParcels(){
@@ -56,12 +64,13 @@ public class Parcel {
 				
 				String[] values = line.split(",");
 				
-				if(values.length == 2) {	// To ensure both name and weight are recorded
+				if(values.length == 3) {	// To ensure both name and weight are recorded
 					String name = values[0].trim();
 					double weight = Double.parseDouble(values[1].trim());
+					String type = values[2].trim();
 					
 					// add new parcel to the list
-					allParcels.add(new Parcel(name, weight));
+					allParcels.add(new Parcel(name, weight, type));
 				}
 			}
 			scanner.close();
@@ -78,7 +87,8 @@ public class Parcel {
     public static void displayAllParcels() {
         System.out.println("=== Parcel List ===");
         for (Parcel p : allParcels) {
-            System.out.println("Parcel Name: " + p.getName() + ", Weight: " + p.getWeight() + " kg");
+            System.out.println("Parcel Name: " + p.getName() + ", Weight: " + p.getWeight() + " kg, "
+            		+ "Type: " + p.getType());
         }
     }
     

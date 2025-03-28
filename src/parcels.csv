@@ -1,101 +1,101 @@
-ParcelName,Weight (kg)
-Parcel_1,17
-Parcel_2,48
-Parcel_3,87
-Parcel_4,80
-Parcel_5,33
-Parcel_6,11
-Parcel_7,16
-Parcel_8,59
-Parcel_9,72
-Parcel_10,78
-Parcel_11,65
-Parcel_12,73
-Parcel_13,18
-Parcel_14,76
-Parcel_15,55
-Parcel_16,34
-Parcel_17,79
-Parcel_18,59
-Parcel_19,50
-Parcel_20,57
-Parcel_21,58
-Parcel_22,11
-Parcel_23,20
-Parcel_24,96
-Parcel_25,11
-Parcel_26,11
-Parcel_27,84
-Parcel_28,74
-Parcel_29,64
-Parcel_30,98
-Parcel_31,29
-Parcel_32,88
-Parcel_33,53
-Parcel_34,29
-Parcel_35,15
-Parcel_36,41
-Parcel_37,37
-Parcel_38,99
-Parcel_39,76
-Parcel_40,70
-Parcel_41,65
-Parcel_42,77
-Parcel_43,65
-Parcel_44,39
-Parcel_45,100
-Parcel_46,72
-Parcel_47,41
-Parcel_48,13
-Parcel_49,13
-Parcel_50,10
-Parcel_51,94
-Parcel_52,95
-Parcel_53,72
-Parcel_54,60
-Parcel_55,31
-Parcel_56,66
-Parcel_57,26
-Parcel_58,35
-Parcel_59,71
-Parcel_60,48
-Parcel_61,95
-Parcel_62,100
-Parcel_63,29
-Parcel_64,94
-Parcel_65,45
-Parcel_66,69
-Parcel_67,53
-Parcel_68,13
-Parcel_69,45
-Parcel_70,70
-Parcel_71,89
-Parcel_72,61
-Parcel_73,61
-Parcel_74,81
-Parcel_75,62
-Parcel_76,51
-Parcel_77,55
-Parcel_78,47
-Parcel_79,96
-Parcel_80,43
-Parcel_81,65
-Parcel_82,54
-Parcel_83,92
-Parcel_84,64
-Parcel_85,29
-Parcel_86,62
-Parcel_87,59
-Parcel_88,83
-Parcel_89,76
-Parcel_90,82
-Parcel_91,73
-Parcel_92,72
-Parcel_93,39
-Parcel_94,91
-Parcel_95,78
-Parcel_96,96
-Parcel_97,85
-Parcel_98,38
-Parcel_99,35
-Parcel_100,62
+ParcelName,Weight (kg),Type
+Parcel_1,25.79,Plastic Wrap
+Parcel_2,72.81,Box
+Parcel_3,131.98,Plastic Wrap
+Parcel_4,121.36,Box
+Parcel_5,50.06,Plastic Wrap
+Parcel_6,16.69,Plastic Wrap
+Parcel_7,24.27,Box
+Parcel_8,89.5,Box
+Parcel_9,109.22,Plastic Wrap
+Parcel_10,118.32,Plastic Wrap
+Parcel_11,98.6,Plastic Wrap
+Parcel_12,110.74,Plastic Wrap
+Parcel_13,27.31,Box
+Parcel_14,115.29,Plastic Wrap
+Parcel_15,83.43,Plastic Wrap
+Parcel_16,51.58,Box
+Parcel_17,119.84,Plastic Wrap
+Parcel_18,89.5,Plastic Wrap
+Parcel_19,75.85,Box
+Parcel_20,86.47,Plastic Wrap
+Parcel_21,87.98,Box
+Parcel_22,16.69,Box
+Parcel_23,30.34,Plastic Wrap
+Parcel_24,145.63,Box
+Parcel_25,16.69,Plastic Wrap
+Parcel_26,16.69,Box
+Parcel_27,127.43,Plastic Wrap
+Parcel_28,112.26,Box
+Parcel_29,97.09,Box
+Parcel_30,148.66,Plastic Wrap
+Parcel_31,43.99,Plastic Wrap
+Parcel_32,133.49,Plastic Wrap
+Parcel_33,80.4,Box
+Parcel_34,43.99,Box
+Parcel_35,22.75,Plastic Wrap
+Parcel_36,62.2,Plastic Wrap
+Parcel_37,56.13,Box
+Parcel_38,150.18,Box
+Parcel_39,115.29,Box
+Parcel_40,106.19,Box
+Parcel_41,98.6,Box
+Parcel_42,116.81,Box
+Parcel_43,98.6,Plastic Wrap
+Parcel_44,59.16,Plastic Wrap
+Parcel_45,151.7,Plastic Wrap
+Parcel_46,109.22,Plastic Wrap
+Parcel_47,62.2,Plastic Wrap
+Parcel_48,19.72,Plastic Wrap
+Parcel_49,19.72,Box
+Parcel_50,15.17,Plastic Wrap
+Parcel_51,142.6,Plastic Wrap
+Parcel_52,144.11,Box
+Parcel_53,109.22,Plastic Wrap
+Parcel_54,91.02,Box
+Parcel_55,47.03,Plastic Wrap
+Parcel_56,100.12,Plastic Wrap
+Parcel_57,39.44,Plastic Wrap
+Parcel_58,53.09,Box
+Parcel_59,107.7,Plastic Wrap
+Parcel_60,72.81,Plastic Wrap
+Parcel_61,144.11,Plastic Wrap
+Parcel_62,151.7,Plastic Wrap
+Parcel_63,43.99,Box
+Parcel_64,142.6,Box
+Parcel_65,68.26,Box
+Parcel_66,104.67,Plastic Wrap
+Parcel_67,80.4,Box
+Parcel_68,19.72,Plastic Wrap
+Parcel_69,68.26,Box
+Parcel_70,106.19,Plastic Wrap
+Parcel_71,135.01,Box
+Parcel_72,92.54,Box
+Parcel_73,92.54,Plastic Wrap
+Parcel_74,122.87,Box
+Parcel_75,94.05,Box
+Parcel_76,77.37,Box
+Parcel_77,83.43,Plastic Wrap
+Parcel_78,71.3,Plastic Wrap
+Parcel_79,145.63,Box
+Parcel_80,65.23,Plastic Wrap
+Parcel_81,98.6,Plastic Wrap
+Parcel_82,81.92,Plastic Wrap
+Parcel_83,139.56,Box
+Parcel_84,97.09,Box
+Parcel_85,43.99,Box
+Parcel_86,94.05,Plastic Wrap
+Parcel_87,89.5,Plastic Wrap
+Parcel_88,125.91,Box
+Parcel_89,115.29,Plastic Wrap
+Parcel_90,124.39,Box
+Parcel_91,110.74,Plastic Wrap
+Parcel_92,109.22,Box
+Parcel_93,59.16,Box
+Parcel_94,138.04,Box
+Parcel_95,118.32,Box
+Parcel_96,145.63,Plastic Wrap
+Parcel_97,128.94,Box
+Parcel_98,57.64,Box
+Parcel_99,53.09,Plastic Wrap
+Parcel_100,94.05,Box
