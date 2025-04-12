@@ -6,7 +6,7 @@ public class BestFitAlgorithm implements BinPackingAlgorithm {
 
 	@Override
 	public List<Truck> pack(List<Parcel> parcels, double loadLimit) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stubxx
 		return null;
 	}
 
