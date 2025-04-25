@@ -1,16 +1,24 @@
-package edu.utar.binpacking;
+package edu.utar.binpacking.algorithms;
 
-import java.util.List;
+import java.util.*;
+
+import edu.utar.binpacking.dataStructures.Parcel;
+import edu.utar.binpacking.dataStructures.Truck;
+
 import java.util.ArrayList;
 
 public class BestFitAlgorithm implements BinPackingAlgorithm {
 
     @Override
-    public List<Truck> pack(List<Parcel> parcels, double loadLimit) {
+    public List<Truck> pack(Queue<Parcel> parcels, double loadLimit) {
         List<Truck> truckList = new ArrayList<>();
         truckList.add(new Truck(loadLimit));
 
-        for (Parcel parcel : parcels) {
+        // Use iterator instead of enhanced for loop
+        Iterator<Parcel> iterator = parcels.iterator();
+        while (iterator.hasNext()) {
+            Parcel parcel = iterator.next();
+            
             int bestFitIndex = -1;
             double minRemaining = Double.MAX_VALUE;
 
@@ -27,11 +35,11 @@ public class BestFitAlgorithm implements BinPackingAlgorithm {
 
             // If found a truck that fits best
             if (bestFitIndex != -1) {
-                truckList.get(bestFitIndex).addParcel(parcel);
+                truckList.get(bestFitIndex).addItem(parcel);
             } else {
                 // No suitable truck found, create a new one
                 Truck newTruck = new Truck(loadLimit);
-                newTruck.addParcel(parcel);
+                newTruck.addItem(parcel);
                 truckList.add(newTruck);
             }
         }
