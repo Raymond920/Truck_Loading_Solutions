@@ -41,7 +41,7 @@ public class UserInterface {
 			System.out.println("=============================================");
 		}
 		System.out.println("=============================================");
-		System.out.println("Total parcels weight: " + allParcelWeight);
+		System.out.println("Total parcels weight: " + Math.round(allParcelWeight * 100.0)/100.0);
 	}
 
 	public void start() {
@@ -53,6 +53,7 @@ public class UserInterface {
 		System.out.println("2. Best Fit");
 		System.out.println("3. First Fit Decreasing");
 		System.out.println("4. Best Fit Decreasing");
+		System.out.println("5. Next Fit Decreasing");
 		int choice = scanner.nextInt();
 
 		// Initialize selected algorithm
@@ -68,6 +69,9 @@ public class UserInterface {
 			break;
 		case 4:
 			algorithm = new BestFitDecreasingAlgorithm();
+			break;
+		case 5:
+			algorithm = new NextFitAlgorithm();
 			break;
 		default:
 			System.out.println("Invalid choice! Defaulting to First Fit.");
