@@ -7,8 +7,16 @@ import edu.utar.binpacking.dataStructures.Truck;
 
 import java.util.ArrayList;
 
-public class BestFitAlgorithm implements BinPackingAlgorithm {
+public class BestFitAlgorithm extends AbstractBinPackingAlgorithm {
 
+	public BestFitAlgorithm() {
+		super("Best Fit Algorithm");
+	}
+	
+	public BestFitAlgorithm(String name) {
+		super(name);
+	}
+	
     @Override
     public List<Truck> pack(Queue<Parcel> parcels, double loadLimit) {
         List<Truck> truckList = new ArrayList<>();

@@ -5,7 +5,11 @@ import java.util.*;
 import edu.utar.binpacking.dataStructures.Parcel;
 import edu.utar.binpacking.dataStructures.Truck;
 
-public class NextFitAlgorithm implements BinPackingAlgorithm{
+public class NextFitAlgorithm extends AbstractBinPackingAlgorithm{
+	public NextFitAlgorithm() {
+		super("Next Fit");
+	}
+	
 	 @Override
 	    public List<Truck> pack(Queue<Parcel> parcels, double loadLimit) {
 		 	List<Truck> truckList = new ArrayList<>();

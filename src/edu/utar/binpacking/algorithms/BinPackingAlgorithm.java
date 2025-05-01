@@ -6,5 +6,8 @@ import edu.utar.binpacking.dataStructures.Parcel;
 import edu.utar.binpacking.dataStructures.Truck;
 
 public interface BinPackingAlgorithm {
-	List<Truck> pack(Queue<Parcel> parcels, double loadLimit);
+	void Pack(Queue<Parcel> parcels, double loadLimit);
+	String getName();
+	long getExecutionTime();
+	List<Truck> getTruckList();
 }

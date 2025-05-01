@@ -4,7 +4,15 @@ import java.util.*;
 import edu.utar.binpacking.dataStructures.Parcel;
 import edu.utar.binpacking.dataStructures.Truck;
 
-public class FirstFitAlgorithm implements BinPackingAlgorithm {
+public class FirstFitAlgorithm extends AbstractBinPackingAlgorithm {
+	
+	public FirstFitAlgorithm() {
+		super("First Fit");
+	}
+	
+	public FirstFitAlgorithm(String name) {
+		super(name);
+	}
 
 	@Override
 	public List<Truck> pack(Queue<Parcel> parcels, double loadLimit) {

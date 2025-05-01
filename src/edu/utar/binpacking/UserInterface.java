@@ -41,42 +41,18 @@ public class UserInterface {
 			System.out.println("=============================================");
 		}
 		System.out.println("=============================================");
-		System.out.println("Total parcels weight: " + Math.round(allParcelWeight * 100.0)/100.0);
+		System.out.println("Total parcels weight: " + Math.round(allParcelWeight * 100.0) / 100.0);
 	}
 
 	public void start() {
 		System.out.println("=== Bin Packing System ===");
 
-		// Get user choice for algorithm
-		System.out.println("Select Packing Algorithm:");
-		System.out.println("1. First Fit");
-		System.out.println("2. Best Fit");
-		System.out.println("3. First Fit Decreasing");
-		System.out.println("4. Best Fit Decreasing");
-		System.out.println("5. Next Fit Decreasing");
-		int choice = scanner.nextInt();
-
-		// Initialize selected algorithm
-		switch (choice) {
-		case 1:
-			algorithm = new FirstFitAlgorithm();
-			break;
-		case 2:
-			algorithm = new BestFitAlgorithm();
-			break;
-		case 3:
-			algorithm = new FirstFitDecreasingAlgorithm();
-			break;
-		case 4:
-			algorithm = new BestFitDecreasingAlgorithm();
-			break;
-		case 5:
-			algorithm = new NextFitAlgorithm();
-			break;
-		default:
-			System.out.println("Invalid choice! Defaulting to First Fit.");
-			algorithm = new FirstFitAlgorithm();
-		}
+		List<BinPackingAlgorithm> algorithms = new ArrayList<>();
+		algorithms.add(new FirstFitAlgorithm());
+		algorithms.add(new FirstFitDecreasingAlgorithm());
+		algorithms.add(new BestFitAlgorithm());
+		algorithms.add(new BestFitDecreasingAlgorithm());
+		algorithms.add(new NextFitAlgorithm());
 
 		Queue<Parcel> parcels = ParcelController.getAllParcels();
 
@@ -84,7 +60,7 @@ public class UserInterface {
 			System.out.println("No parcels loaded. Loading from CSV...");
 		}
 
-		System.out.print("Enter truck load limit: ");
+		System.out.print("Enter truck load limit (kg): ");
 		truckLoadLimit = scanner.nextDouble();
 
 		while (truckLoadLimit < ParcelController.getLargestWeight()) {
@@ -93,8 +69,35 @@ public class UserInterface {
 			truckLoadLimit = scanner.nextDouble();
 		}
 
-		List<Truck> resultList = algorithm.pack(parcels, truckLoadLimit);
-		displayResults(resultList);
+		System.out.println("Comparison of Algorithms");
+		System.out.println("=============================================\n");
+		for (int i = 0; i < algorithms.size(); i++) {
+			algorithm = algorithms.get(i);
+			algorithm.Pack(parcels, truckLoadLimit);
+			System.out.println("Algorithm: " + algorithm.getName());
+			System.out.println("Execution Time (nano seconds): " + algorithm.getExecutionTime());
+			System.out.println("Total trucks needed: " + algorithm.getTruckList().size());
+			System.out.println("=============================================\n");
+		}
+
+		boolean exit = false;
+		while (!exit) {
+			// Display results for the selected algorithm
+			System.out.println("\n=============================================");
+			System.out.println("View truck list for the selected algorithm");
+			System.out.println("=============================================");
+			System.out.println("0. Exit");
+			for (int i = 0; i < algorithms.size(); i++) {
+				System.out.println((i + 1) + ". " + algorithms.get(i).getName());
+			}
+			System.out.print("Select Algorithm: ");
+			int selectedAlgorithm = scanner.nextInt();
+			if (selectedAlgorithm != 0) {
+				displayResults(algorithms.get(selectedAlgorithm - 1).getTruckList());
+			} else {
+				exit = true;
+			}
+		}
 	}
 
 	public static void main(String[] args) {
