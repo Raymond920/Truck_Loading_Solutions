@@ -8,6 +8,7 @@ import edu.utar.binpacking.algorithms.*;
 import edu.utar.binpacking.dataStructures.*;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 public class UserInterface {
 	private BinPackingAlgorithm algorithm;
@@ -60,8 +61,17 @@ public class UserInterface {
 			System.out.println("No parcels loaded. Loading from CSV...");
 		}
 
-		System.out.print("Enter truck load limit (kg): ");
-		truckLoadLimit = scanner.nextDouble();
+		boolean isValid = false;
+		while(!isValid) {
+			System.out.print("Enter truck load limit (kg): ");
+			try {
+				truckLoadLimit = scanner.nextDouble();
+				isValid = true;
+			}catch(InputMismatchException e) {
+				System.out.println("Invalid input.");
+				scanner.nextLine();
+			}
+		}
 
 		while (truckLoadLimit < ParcelController.getLargestWeight()) {
 			System.out.println("The minimum load limit must larger than " + ParcelController.getLargestWeight());
@@ -90,8 +100,18 @@ public class UserInterface {
 			for (int i = 0; i < algorithms.size(); i++) {
 				System.out.println((i + 1) + ". " + algorithms.get(i).getName());
 			}
-			System.out.print("Select Algorithm: ");
-			int selectedAlgorithm = scanner.nextInt();
+			int selectedAlgorithm = -1;
+			isValid = false;
+			while(!isValid) {
+				System.out.print("Select Algorithm: ");
+				try {
+					selectedAlgorithm = scanner.nextInt();
+					isValid = true;
+				}catch(InputMismatchException e) {
+					System.out.println("Invalid input.");
+					scanner.nextLine();
+				}
+			}
 			if (selectedAlgorithm != 0) {
 				displayResults(algorithms.get(selectedAlgorithm - 1).getTruckList());
 			} else {
