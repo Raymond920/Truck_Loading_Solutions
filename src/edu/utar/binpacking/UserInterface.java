@@ -11,8 +11,6 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 
 public class UserInterface {
-	private BinPackingAlgorithm algorithm;
-	private double truckLoadLimit;
 	private Scanner scanner;
 
 	public UserInterface() {
@@ -42,6 +40,9 @@ public class UserInterface {
 	}
 
 	public void start() {
+		BinPackingAlgorithm algorithm;
+		double truckLoadLimit=0;
+		
 		System.out.println("=== Bin Packing System ===");
 
 		List<BinPackingAlgorithm> algorithms = new ArrayList<>();
