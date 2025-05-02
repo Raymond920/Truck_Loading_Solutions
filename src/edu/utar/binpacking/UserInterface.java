@@ -19,10 +19,6 @@ public class UserInterface {
 		scanner = new Scanner(System.in);
 	}
 
-	public void selectAlgorithm(BinPackingAlgorithm algorithm) {
-		this.algorithm = algorithm;
-	}
-
 	public void displayResults(List<Truck> trucks) {
 		System.out.println("Total trucks needed: " + trucks.size());
 		double allParcelWeight = 0.0;
