@@ -66,21 +66,4 @@ public class ParcelController {
             System.out.println("File not found: " + e.getMessage());
         }
     }
-    
-    // Display all parcels
-    public static void displayAllParcels() {
-        System.out.println("=== Parcel List ===");
-        Iterator<Parcel> iterator = allParcels.iterator();
-        while (iterator.hasNext()) {
-            Parcel parcel = iterator.next();
-            System.out.println("Parcel Name: " + parcel.getName() + ", Weight: " + parcel.getWeight() + " kg, "
-                    + "Type: " + parcel.getType());
-        }
-    }
-    
-    public static void main(String[] args) {
-        getAllParcels();
-        displayAllParcels();
-        System.out.println(allParcels.size());
-    }
 }
