@@ -1,3 +1,6 @@
+> [!NOTE]
+> This project is academic coursework for UECS2453	PROBLEM SOLVING WITH DATA STRUCTURES AND ALGORITHMS module.
+> 
 # Truck Loading Solutions
 
 This project provides a solution for optimizing truck loading using various bin packing algorithms. It aims to minimize the number of trucks required to transport a given set of parcels, each with a specific weight.
