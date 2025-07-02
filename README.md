@@ -98,6 +98,12 @@ Contributions are welcome! To contribute to this project:
 4.  Write tests to cover your changes.
 5.  Submit a pull request with a clear description of your changes.
 
+## 📜 Contributors
+
+<a href="https://github.com/Raymond920/Truck_Loading_Solutions/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Raymond920/Truck_Loading_Solutions" />
+</a>
+
 ## License Information
 
 No license has been specified for this project. All rights are reserved by the owner.
